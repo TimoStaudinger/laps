@@ -32,7 +32,7 @@ class Race extends React.Component {
 
   getParties() {
     return this.props.parties.map(party => (
-      {...party, timer: Date.now() - party.timer}
+      {...party, timer: Date.now() - party.lastLap}
     ))
   }
 
@@ -41,7 +41,10 @@ class Race extends React.Component {
       <View style={styles.verticalContainer}>
         <Timer>{this.state.timer}</Timer>
 
-        <PartyList parties={this.state.parties} />
+        <PartyList
+          parties={this.state.parties}
+          onCompleteLap={this.props.completeLap}
+        />
 
         <ButtonGroup>
           <Button onPress={this.props.cancelRace}>Cancel</Button>

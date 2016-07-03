@@ -1,17 +1,24 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableNativeFeedback } from 'react-native'
 import InlineTimer from './InlineTimer'
 
 const Party = (props) => (
-  <View style={[styles.item, {backgroundColor: props.secondaryColor}]}>
-    <Text style={[styles.text, {color: props.primaryColor}]}>
-      {props.name}
-    </Text>
-    <Text style={[styles.roundText, {color: props.primaryColor}]}>
-      Round <Text style={styles.roundNumber}>1</Text>
-    </Text>
-    <InlineTimer timer={props.timer} color={props.primaryColor} />
-  </View>
+  <TouchableNativeFeedback
+    background={TouchableNativeFeedback.SelectableBackground()}
+    onPress={() => props.onCompleteLap(props.id)}
+  >
+    <View
+      style={[styles.item, {backgroundColor: props.secondaryColor}]}
+    >
+      <Text style={[styles.text, {color: props.primaryColor}]}>
+        {props.name}
+      </Text>
+      <Text style={[styles.roundText, {color: props.primaryColor}]}>
+        Round <Text style={styles.roundNumber}>{props.laps.length + 1}</Text>
+      </Text>
+      <InlineTimer timer={props.timer} color={props.primaryColor} />
+    </View>
+  </TouchableNativeFeedback>
 )
 
 const styles = StyleSheet.create({

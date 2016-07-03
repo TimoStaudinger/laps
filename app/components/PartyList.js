@@ -4,7 +4,11 @@ import Party from './Party'
 
 const PartyList = (props) => {
   const parties = props.parties.map(party => (
-    <Party key={party.id} {...party} />
+    <Party
+      key={party.id}
+      onCompleteLap={props.onCompleteLap}
+      {...party}
+    />
   ))
 
   return (
