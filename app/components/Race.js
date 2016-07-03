@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableNativeFeedback } from 'react-native'
+import { StyleSheet, Text, View, TouchableNativeFeedback, BackAndroid } from 'react-native'
 import Timer from './Timer'
 import PartyList from './PartyList'
 import ButtonGroup from './ButtonGroup'
@@ -13,6 +13,11 @@ class Race extends React.Component {
       timer: 0,
       parties: []
     }
+
+    BackAndroid.addEventListener('hardwareBackPress', () => {
+      this.props.cancelRace()
+      return true
+    })
   }
 
   componentDidMount() {
