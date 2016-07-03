@@ -10,6 +10,7 @@ const getLastLap = (state, party) => {
 const mapStateToProps = (state, ownProps) => {
   return {
     timer: state.timer,
+    isRace: state.status === 'RACE',
     parties: state.parties.map((party) => ({
       ...party,
       lastLap: getLastLap(state, party)
@@ -21,6 +22,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     cancelRace: () => {
       dispatch(cancelRace())
+      ownProps.navigator.pop()
     },
     completeLap: (id) => {
       dispatch(completeLap(id))

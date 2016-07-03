@@ -16,10 +16,14 @@ class Race extends React.Component {
   }
 
   componentDidMount() {
-    this.timerInterval = setInterval(() => this.setState({
-      timer: this.getTimer(),
-      parties: this.getParties()
-    }), 125)
+    this.timerInterval = setInterval(() => {
+      if(this.props.isRace) {
+        this.setState({
+          timer: this.getTimer(),
+          parties: this.getParties()
+        })
+      }
+    }, 125)
   }
 
   componentWillUnmount() {

@@ -26,21 +26,6 @@ const initialState = [{
   id: 'Party E',
   ...ColorScheme.BLUE,
   laps: []
-}, {
-  name: 'Party F',
-  id: 'Party F',
-  ...ColorScheme.INDIGO,
-  laps: []
-}, {
-  name: 'Party G',
-  id: 'Party G',
-  ...ColorScheme.PURPLE,
-  laps: []
-}, {
-  name: 'Party H',
-  id: 'Party H',
-  ...ColorScheme.PINK,
-  laps: []
 }]
 
 export default (state = initialState, action) => {

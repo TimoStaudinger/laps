@@ -10,8 +10,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     startRace: () => {
-      console.log('fired')
       dispatch(startRace())
+      ownProps.navigator.push({id: 'RACE'})
     }
   }
 }

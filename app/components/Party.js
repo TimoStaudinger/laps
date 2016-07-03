@@ -13,8 +13,8 @@ const Party = (props) => (
       <Text style={[styles.text, {color: props.primaryColor}]}>
         {props.name}
       </Text>
-      <Text style={[styles.roundText, {color: props.primaryColor}]}>
-        Round <Text style={styles.roundNumber}>{props.laps.length + 1}</Text>
+      <Text style={[styles.lapText, {color: props.primaryColor}]}>
+        Lap <Text style={styles.lapNumber}>{props.laps.length + 1}</Text>
       </Text>
       <InlineTimer timer={props.timer} color={props.primaryColor} />
     </View>
@@ -36,13 +36,13 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     margin: 10
   },
-  roundText: {
+  lapText: {
     flex: .7,
     fontSize: 15,
     textAlign: 'center',
     margin: 10
   },
-  roundNumber: {
+  lapNumber: {
     fontSize: 25
   }
 })
