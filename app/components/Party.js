@@ -4,7 +4,7 @@ import InlineTimer from './InlineTimer'
 
 const Party = (props) => (
   <TouchableNativeFeedback
-    background={TouchableNativeFeedback.SelectableBackground()}
+    background={TouchableNativeFeedback.SelectableBackgroundBorderless()}
     onPress={() => props.onCompleteLap(props.id)}
   >
     <View

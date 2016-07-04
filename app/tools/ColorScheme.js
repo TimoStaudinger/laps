@@ -1,3 +1,10 @@
+export const APP = {
+  primaryColor: '#607D8B',
+  secondaryColor: '#78909C',
+  backgroundColor: '#ECEFF1',
+  fontColor: 'white'
+}
+
 export const RED = {
   primaryColor: '#B71C1C',
   secondaryColor: '#FFCDD2'

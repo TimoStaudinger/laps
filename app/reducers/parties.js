@@ -2,28 +2,28 @@ import { COMPLETE_LAP, START_RACE, CANCEL_RACE } from '../actions'
 import * as ColorScheme from '../tools/ColorScheme'
 
 const initialState = [{
-  name: 'Party A',
-  id: 'Party A',
+  name: 'Runner A',
+  id: 'Runner A',
   ...ColorScheme.RED,
   laps: []
 }, {
-  name: 'Party B',
-  id: 'Party B',
+  name: 'Runner B',
+  id: 'Runner B',
   ...ColorScheme.ORANGE,
   laps: []
 }, {
-  name: 'Party C',
-  id: 'Party C',
+  name: 'Runner C',
+  id: 'Runner C',
   ...ColorScheme.YELLOW,
   laps: []
 }, {
-  name: 'Party D',
-  id: 'Party D',
+  name: 'Runner D',
+  id: 'Runner D',
   ...ColorScheme.LIGHT_GREEN,
   laps: []
 }, {
-  name: 'Party E',
-  id: 'Party E',
+  name: 'Runner E',
+  id: 'Runner E',
   ...ColorScheme.BLUE,
   laps: []
 }]
