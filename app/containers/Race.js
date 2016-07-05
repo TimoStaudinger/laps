@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     timer: state.timer,
     isRace: state.status === 'RACE',
-    parties: state.parties.map((party) => ({
+    parties: state.parties.slice(0, state.numberOfParties).map((party) => ({
       ...party,
       lastLap: getLastLap(state, party)
     }))

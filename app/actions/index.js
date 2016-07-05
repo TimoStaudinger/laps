@@ -13,3 +13,9 @@ export const completeLap = (id) => ({
   type: COMPLETE_LAP,
   id
 })
+
+export const UPDATE_NUMBER_OF_PARTIES = 'UPDATE_NUMBER_OF_PARTIES'
+export const updateNumberOfParties = (numberOfParties) => ({
+  type: UPDATE_NUMBER_OF_PARTIES,
+  numberOfParties
+})

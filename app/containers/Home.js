@@ -1,9 +1,10 @@
 import { connect } from 'react-redux'
-import { startRace } from '../actions'
+import { startRace, updateNumberOfParties } from '../actions'
 import HomeComponent from '../components/Home'
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    numberOfParties: state.numberOfParties
   }
 }
 
@@ -12,6 +13,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     startRace: () => {
       dispatch(startRace())
       ownProps.navigator.push({id: 'RACE'})
+    },
+    updateNumberOfParties: (numberOfParties) => {
+      dispatch(updateNumberOfParties(numberOfParties))
     }
   }
 }

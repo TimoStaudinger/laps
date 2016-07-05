@@ -26,6 +26,21 @@ const initialState = [{
   id: 'Runner E',
   ...ColorScheme.BLUE,
   laps: []
+}, {
+  name: 'Runner F',
+  id: 'Runner F',
+  ...ColorScheme.INDIGO,
+  laps: []
+}, {
+  name: 'Runner G',
+  id: 'Runner G',
+  ...ColorScheme.PURPLE,
+  laps: []
+}, {
+  name: 'Runner H',
+  id: 'Runner H',
+  ...ColorScheme.PINK,
+  laps: []
 }]
 
 export default (state = initialState, action) => {

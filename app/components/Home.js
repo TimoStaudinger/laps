@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, ToolbarAndroid } from 'react-native'
+import { StyleSheet, Slider, Text, View, ToolbarAndroid } from 'react-native'
 import Button from 'apsl-react-native-button'
 import { APP as ColorScheme } from '../tools/ColorScheme'
 
@@ -24,6 +24,17 @@ const Home = (props) => {
         onActionSelected={onActionSelected} />
 
       <View style={styles.buttonContainer}>
+        <Text style={styles.label}>
+          Runners: {props.numberOfParties}
+        </Text>
+        <Slider
+          style={styles.input}
+          maximumValue={8}
+          minimumValue={1}
+          step={1}
+          onValueChange={props.updateNumberOfParties}
+          value={props.numberOfParties}
+        />
       </View>
     </View>
   )
@@ -34,6 +45,16 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'stretch',
     justifyContent: 'center'
+  },
+  row: {
+    flexDirection: 'row'
+  },
+  input: {
+    margin: 5
+  },
+  label: {
+    margin: 5,
+    fontSize: 20
   },
   toolbar: {
     height: 54,
