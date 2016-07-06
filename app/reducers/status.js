@@ -1,6 +1,6 @@
-import { START_RACE, CANCEL_RACE } from '../actions'
+import {START_RACE, CANCEL_RACE} from '../actions'
 
-export default status = (state = 'HOME', action) => {
+export default (state = 'HOME', action) => {
   switch (action.type) {
     case START_RACE:
       return 'RACE'

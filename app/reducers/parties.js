@@ -1,4 +1,4 @@
-import { COMPLETE_LAP, START_RACE, CANCEL_RACE } from '../actions'
+import {COMPLETE_LAP, START_RACE, CANCEL_RACE} from '../actions'
 import * as ColorScheme from '../tools/ColorScheme'
 
 const initialState = [{
@@ -47,15 +47,13 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case COMPLETE_LAP:
       return state.map(party => {
-        if(action.id === party.id) return {...party, laps: [...party.laps, Date.now()]}
-        else return party
+        if (action.id === party.id) return {...party, laps: [...party.laps, Date.now()]}
+        return party
       })
-      break
 
     case CANCEL_RACE:
     case START_RACE:
       return initialState
-      break
 
     default:
       return state

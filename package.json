@@ -13,5 +13,31 @@
     "apsl-react-native-button": "2.5.0",
     "redux-logger": "2.6.x",
     "redux-thunk": "2.0.x"
+  },
+  "devDependencies": {
+    "eslint": "3.0.1",
+    "eslint-plugin-react": "5.2.2",
+    "eslint-plugin-react-native": "1.1.0",
+    "eslint-config-airbnb": "9.0.1",
+    "eslint-plugin-import": "1.10.2",
+    "eslint-plugin-jsx-a11y": "1.5.3"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "react",
+      "react-native"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "extends": ["airbnb"],
+    "rules": {
+      "semi": ["error", "never"],
+      "comma-dangle": ["error", "never"],
+      "object-curly-spacing": ["error", "never"]
+    }
   }
 }
