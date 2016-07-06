@@ -66,6 +66,17 @@ const Home = (props) => {
           onValueChange={props.updateNumberOfParties}
           value={props.numberOfParties}
         />
+        <Text style={styles.label}>
+          Rounds: {props.numberOfLaps}
+        </Text>
+        <Slider
+          style={styles.input}
+          maximumValue={20}
+          minimumValue={1}
+          step={1}
+          onValueChange={props.updateNumberOfLaps}
+          value={props.numberOfLaps}
+        />
       </View>
     </View>
   )
@@ -74,7 +85,9 @@ const Home = (props) => {
 Home.propTypes = {
   startRace: PropTypes.func.isRequired,
   numberOfParties: PropTypes.number.isRequired,
-  updateNumberOfParties: PropTypes.func.isRequired
+  updateNumberOfParties: PropTypes.func.isRequired,
+  numberOfLaps: PropTypes.number.isRequired,
+  updateNumberOfLaps: PropTypes.func.isRequired
 }
 
 export default Home

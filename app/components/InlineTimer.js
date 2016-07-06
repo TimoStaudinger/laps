@@ -40,7 +40,8 @@ const InlineTimer = (props) => (
 
 InlineTimer.propTypes = {
   color: PropTypes.string.isRequired,
-  timer: PropTypes.number.isRequired
+  timer: PropTypes.number.isRequired,
+  isFinished: PropTypes.bool.isRequired
 }
 
 export default InlineTimer

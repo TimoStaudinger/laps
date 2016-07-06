@@ -19,3 +19,9 @@ export const updateNumberOfParties = (numberOfParties) => ({
   type: UPDATE_NUMBER_OF_PARTIES,
   numberOfParties
 })
+
+export const UPDATE_NUMBER_OF_LAPS = 'UPDATE_NUMBER_OF_LAPS'
+export const updateNumberOfLaps = (numberOfLaps) => ({
+  type: UPDATE_NUMBER_OF_LAPS,
+  numberOfLaps
+})

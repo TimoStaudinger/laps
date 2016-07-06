@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
-import {StyleSheet, View} from 'react-native'
-import Party from './Party'
+import {StyleSheet, View, Text} from 'react-native'
+import RunningParty from './RunningParty'
 
 const styles = StyleSheet.create({
   row: {
@@ -11,11 +11,13 @@ const styles = StyleSheet.create({
 
 const PartyList = (props) => {
   const parties = props.parties.map(party => (
-    <Party
-      key={party.id}
-      onCompleteLap={props.onCompleteLap}
-      {...party}
-    />
+    party.isFinished ?
+      <Text>Finished</Text> :
+      <RunningParty
+        key={party.id}
+        onCompleteLap={props.onCompleteLap}
+        {...party}
+      />
   ))
 
   return (

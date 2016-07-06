@@ -12,7 +12,8 @@ const mapStateToProps = (state) => ({
   isRace: state.status === 'RACE',
   parties: state.parties.slice(0, state.numberOfParties).map((party) => ({
     ...party,
-    lastLap: getLastLap(state, party)
+    lastLap: getLastLap(state, party),
+    isFinished: state.numberOfLaps <= party.laps.length
   }))
 })
 

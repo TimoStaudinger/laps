@@ -21,9 +21,7 @@ const styles = StyleSheet.create({
   },
   lapText: {
     flex: 0.7,
-    fontSize: 15,
-    textAlign: 'center',
-    margin: 10
+    flexDirection: 'column'
   },
   lapNumber: {
     fontSize: 25
@@ -41,9 +39,9 @@ const Party = (props) => (
       <Text style={[styles.text, {color: props.primaryColor}]}>
         {props.name}
       </Text>
-      <Text style={[styles.lapText, {color: props.primaryColor}]}>
-        Lap <Text style={styles.lapNumber}>{props.laps.length + 1}</Text>
-      </Text>
+      <View style={styles.lapText}>
+        {props.children}
+      </View>
       <InlineTimer timer={props.timer} color={props.primaryColor} />
     </View>
   </TouchableNativeFeedback>
@@ -53,7 +51,7 @@ Party.propTypes = {
   id: PropTypes.string.isRequired,
   primaryColor: PropTypes.string.isRequired,
   secondaryColor: PropTypes.string.isRequired,
-  laps: PropTypes.array.isRequired,
+  children: PropTypes.node.isRequired,
   timer: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired
 }

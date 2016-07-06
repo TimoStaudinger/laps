@@ -1,4 +1,4 @@
-import { UPDATE_NUMBER_OF_PARTIES } from '../actions'
+import {UPDATE_NUMBER_OF_PARTIES} from '../actions'
 
 export default (state = 5, action) => {
   switch (action.type) {
